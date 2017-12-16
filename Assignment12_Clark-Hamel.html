@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<style>
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+p.text {
+  width: 70%;
+  padding-left: 10em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+tr:hover {background-color:#f5f5f5;}
+
+</style>
+
+<body>
+
+<h1 align="center">
+<img src="https://drive.google.com/uc?id=1OZ4EyvSzjJK4Zt7AuC_bX7UdxkI67ytX"  alt="Song Library" width="100%", height="auto">
+</h1>
+
+<h2 align="center">
+  <img src="https://drive.google.com/uc?id=1zcDYI8fL3SzR4hh5PphouOv9ypjIY7kk"  alt="Available Music" width="542" height="79.5">
+  </h2>
+
+<div id="main" align="center">
+</div>
+
+
+<script>
+
+let songs = [
+  {title: "Forever to Go",
+    artist: "Andrew Gudgeon",
+    chords: "https://drive.google.com/file/d/13ZHVbzQYUxp2ouiLc0N14WM9DY5Rhbwb/view?usp=sharing",
+    lyrics: "https://drive.google.com/file/d/1z1Nsej6TxmXskJbA6QqF-7Y2oXsush44/view?usp=sharing",
+    key: "C"
+  },
+  {title: "It's Alright",
+    artist: "Andrew Gudgeon",
+    chords: "https://drive.google.com/file/d/1EVqnPFOPDG3-JdkPS2KiP63oc28TRY22/view?usp=sharing",
+    lyrics: "https://drive.google.com/file/d/1mWe1RffryncUyNoh6CTeelwiPMixlka6/view?usp=sharing",
+    key: "B"
+  },
+  {title: "Shooting Star",
+    artist: "Andrew Gudgeon",
+    chords: "https://drive.google.com/file/d/1Kf2c5O7W9AXTmRomtS5yd6XWLLX0kT0i/view?usp=sharing",
+    lyrics: "https://drive.google.com/file/d/1mn4rhfViIyubQHOuAvxK3FSzhadZ8MpH/view?usp=sharing",
+    key: "Ab"
+  },
+]
+
+songs.sort();
+
+document.write('<table align="center"><tr><th>Songs</th><th>Artist</th><th>Chords</th><th>Lyrics</th></tr>');
+
+for(let i = 0; i < songs.length; i++){
+  document.write('<tr><td>' + songs[i].title + '</td><td>' + songs[i].artist + '</td><td> <a href="' + songs[i].chords + '"target="_blank">'+ songs[i].title +' (Key of ' + songs[i].key + ')</a></td><td> <a href="' + songs[i].lyrics + '"target="_blank">'+ songs[i].title +' (Lyrics)</a></td></tr>' );
+}
+
+document.write('</table>');
+
+
+</script>
+
+<h3 align="center">
+  <img src="https://drive.google.com/uc?id=1_tfrK7OnIOWwN5fk6GySACVSHNMdDoOY"  alt="Biography" width="374" height="79.5">
+</h3>
+
+<h4 align="center">
+  <img src="https://drive.google.com/uc?id=1qCxjmmg-MMYzxLDqJnISrknsfyEPdt5n"  alt="Headshot" width="370" height="387">
+</h4>
+
+<p align="center" class="text">
+  <font size="3" color="black">
+    Andrew is currently serving as music director at El Shaddai Congregation in <b>Frederick, MD</b>,  and is currently pursuing a Bachelors degree in Music Production at Berklee College of Music Online.
+    Andrew is passionate about seeing next generation creators equipped. He and his wife Sarah have been married since 2010 and enjoy time spent with family and friends.
+</p>
+
+<p align="center">
+  <font size="2">
+For more information contact me <a href="mailto:agudgeon@berklee.edu">HERE</a>.
+</p>
+
+<p align="center" width="100%">
+  <font size="+1">
+    <head>
+      <title>Andrew Gudgeon Music</title>
+      <meta name="viewport" content="initial-scale=1.0">
+      <meta charset="utf-8">
+      <style>
+        #map {
+          height: 75%;
+          width: 100%;
+          align: "middle";
+
+        }
+        html, body {
+          height: 75%;
+          margin: 0;
+          padding: 0;
+        }
+
+      </style>
+    </head>
+    <body>
+      <div id="map"></div>
+      <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 39.4406192, lng: -77.4885563},
+            zoom: 10,
+            styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+      }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap"
+      async defer></script>
+ </p>
+
+</body>
+</html>
