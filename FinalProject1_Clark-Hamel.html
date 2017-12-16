@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <title>Skyler's Final Project</title>
+</head>
+<body>
+
+<h2>Skyler's Buyer Files</h2>
+<strong>Click button to show buyer info:</strong>
+
+<div id="blankDiv" class="non-paragraph"></div>
+<div id="blankDiv2" class="non-paragraph"></div>
+<button onclick="myFunction()" id="firstButton">Zero Mile Presents</button>
+<div id="firstBuyer" class="paragraph"></div>
+<br>
+<button onclick="myFunction2()" id="secondButton">Murray Hill Theatre</button>
+<div id="secondBuyer" class="paragraph"></div>
+<br>
+<button onclick="myFunction3()" id="thirdButton">Little Flower Events</button>
+<div id="thirdBuyer" class="paragraph"></div>
+<br><br>
+
+<strong>Click button to show venue info:</strong>
+<div id="blankDiv2" class="non-paragraph"></div>
+<button onclick="myFunction4()" id="fourthButton">Georgia Theatre</button>
+<div id="firstVenue" class="paragraph"></div>
+<br>
+<button onclick="myFunction5()" id="fifthButton">Murray Hill Theatre</button>
+<div id="secondVenue" class="paragraph"></div>
+<br>
+<button onclick="myFunction6()" id="sixthButton">Van Meter Hall</button>
+<div id="thirdVenue" class="paragraph"></div>
+<br>
+<button onclick="myFunction7()" id="seventhButton">Variety Playhouse</button>
+<div id="fourthVenue" class="paragraph"></div>
+<br></br>
+<div id="firstDiv" class="top-div"></div>
+<button id="buyerButton">Hide/Show</button>
+
+<script>
+
+function myFunction() {
+    document.getElementById("firstBuyer").innerHTML = "Scott Orvold, scott@zeromile.com";
+}
+
+function myFunction2() {
+    document.getElementById("secondBuyer").innerHTML = "Tom Rossmanith, tom@murrayhilltheatre.com";
+}
+
+function myFunction3() {
+    document.getElementById("thirdBuyer").innerHTML = "Jason Wall, jason@littleflowerevents.com";
+}
+
+function myFunction4() {
+    document.getElementById("firstVenue").innerHTML = "Athens, GA, 965 capacity";
+}
+
+function myFunction5() {
+    document.getElementById("secondVenue").innerHTML = "Jacksonville, FL, 600 capacity";
+}
+
+function myFunction6() {
+    document.getElementById("thirdVenue").innerHTML = "Bowling Green, KY, 1300 capacity";
+}
+
+function myFunction7() {
+    document.getElementById("fourthVenue").innerHTML = "Atlanta, GA, 1050 capacity";
+}
+
+$(document).ready(function(){
+  $("#buyerButton").click(function(){
+    $(".paragraph").toggle();
+  });
+  $("#thirdButton").click(function(){
+    $("#thirdDiv").toggle();
+  });
+});
+
+</script>
+</body>
+</html>
